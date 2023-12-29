@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
     
     printf("R/B Average = %d\n", rb_av);
     printf("B/W Average = %d\n", bw_av);
-    printf("R/B Average = %d\n", wr_av);
+    printf("W/R Average = %d\n", wr_av);
 
     return 0;
 }
