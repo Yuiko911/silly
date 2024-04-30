@@ -3,10 +3,12 @@
 #include <time.h>
 
 #ifdef _WIN32
+#define CURRENTOS 0
 #include <windows.h>
 #endif
 
 #ifdef linux
+#define CURRENTOS 1
 #include <unistd.h>
 #endif
 
@@ -90,7 +92,8 @@ int main()
                     field[i][j] = (neighbors[i][j] == 3) ? 1 : 0;
             }
         }
-        
-        Sleep(25);
+
+        if (CURRENTOS) sleep(0.025);
+        else Sleep(25);
     }
 }
